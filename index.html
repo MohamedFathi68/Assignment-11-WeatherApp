@@ -1,0 +1,206 @@
+<!-- <!DOCTYPE html> -->
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+      integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- nav section -->
+    <nav class="navbar navbar-expand-sm">
+      <div class="container">
+        <div class="logo h-100 d-flex">
+          <div class="w-50 h-100 text-white">
+            <img src="img/logo.png" alt="logo" class="logo-img pt-2" />
+          </div>
+          <div class="w-50 h-100 text-white">
+            <h1 class="fs-4">Weather</h1>
+            <p class="tagline">tagline goes here</p>
+          </div>
+        </div>
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavId"
+          aria-controls="collapsibleNavId"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+          <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            <li class="nav-item m-1">
+              <a class="nav-link active rounded-5 px-3" href="#">Home</a>
+            </li>
+            <li class="nav-item m-1">
+              <a class="nav-link rounded-5 px-3" href="#">News</a>
+            </li>
+            <li class="nav-item m-1">
+              <a class="nav-link rounded-5 px-3" href="#">Live cameras</a>
+            </li>
+            <li class="nav-item m-1">
+              <a class="nav-link rounded-5 px-3" href="#">Photos</a>
+            </li>
+            <li class="nav-item m-1">
+              <a class="nav-link rounded-5 px-3" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- content section -->
+    <section class="min-vh-100">
+      <div class="container p-2">
+        <div class="mt-5 position-relative w-100">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            class="form-control rounded-5 p-3 w-100"
+            placeholder="find your location" />
+          <button
+            type="button"
+            name="button"
+            id="button"
+            class="btn btn-primary position-absolute top-50 end-0 translate-middle px-4 py-2 rounded-5">
+            Find
+          </button>
+        </div>
+        <div class="weather-container mt-5 h-50 overflow-hidden rounded-5">
+          <div class="row g-0 h-100">
+            <div class="col-md-4">
+              <div class="bg-dark h-100">
+                <div
+                  class="text-white d-flex day-2-header justify-content-between px-3 pt-2">
+                  <p class="current-day">Monday</p>
+                  <p class="current-date">22 January</p>
+                </div>
+                <div class="text-white-50 day-2-data p-3">
+                  <p class="location">cairo</p>
+                  <div class="temp d-flex justify-content-around">
+                    <p class="display-1 text-white">22 C</p>
+                    <img src="img/116.png" alt="g" class="p-4" />
+                  </div>
+                  <p class="text-primary">Partly cloudy</p>
+                  <span class="m-2"
+                    ><img src="img/icon-umberella.png" alt="img" />20%</span
+                  >
+                  <span class="m-2"
+                    ><img src="img/icon-wind.png" alt="img" />18km/h</span
+                  >
+                  <span class="m-2"
+                    ><img src="img/icon-compass.png" alt="img" />east</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="day-1">
+                <div class="day-1-header text-white-50 p-3">Monday</div>
+                <div class="day-1-data p-4">
+                  <img src="img/116.png" alt="b" />
+                  <div class="day-1-temp">
+                    <div class="day-1-maxtemp text-white fs-1">22 c</div>
+                    <div class="day-1-mintemp text-white-50 fs-4">18 c</div>
+                  </div>
+                  <p class="text-primary">sunny</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="day-2">
+                <div class="day-2-header text-white-50 p-3">Monday</div>
+                <div class="day-2-data p-4">
+                  <img src="img/116.png" alt="b" />
+                  <div class="day-2-temp">
+                    <div class="day-2-maxtemp text-white fs-1">22 c</div>
+                    <div class="day-2-mintemp text-white-50 fs-4">18 c</div>
+                  </div>
+                  <p class="text-primary">sunny</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer>
+      <div class="container p-1 pb-5 ">
+        <div class="row">
+          <div class="col-md-8">
+            <div class="mt-5 position-relative w-100">
+              <input
+                type="text"
+                name="search"
+                id="search"
+                class="form-control rounded-5 p-3 w-100"
+                placeholder="find your location" />
+              <button
+                type="button"
+                name="button"
+                id="button"
+                class="btn btn-primary position-absolute top-50 end-0 translate-middle px-4 py-2 rounded-5">
+                Find
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <ul class="list-unstyled mt-5 p-3  d-flex justify-content-end text-primary">
+              <li class="mx-3">
+                <a class="p2" href="#">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+              <li class="mx-3">
+                <a class="p2" href="#">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+              <li class="mx-3">
+                <a class="p2" href="#">
+                  <i class="fa-brands fa-google-plus"></i>
+                </a>
+              </li>
+              <li class="mx-3">
+                <a class="p2" href="#">
+                  <i class="fa-brands fa-pinterest"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <p class="text-white-50 mb-5">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS tags -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/fontawesome.min.js"
+      integrity="sha512-C8qHv0HOaf4yoA7ISuuCTrsPX8qjolYTZyoFRKNA9dFKnxgzIHnYTOJhXQIt6zwpIFzCrRzUBuVgtC4e5K1nhA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+      integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
